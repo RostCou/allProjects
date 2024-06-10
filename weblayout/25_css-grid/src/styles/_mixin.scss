@@ -1,0 +1,13 @@
+@mixin marker($content, $padding, $position) {
+  &:before {
+    content: $content;
+    position: absolute;
+    padding: $padding;
+    top: $position;
+    right: $position;
+    font-family: $roboto-font;
+    font-size: $marker-font-size;
+    color: $white-color;
+    background-color: $gray-4-color;
+  }
+}

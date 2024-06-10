@@ -1,0 +1,220 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+source {
+  display: none;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: local("Roboto-Regular"),
+    url("fonts/RobotoRegular.woff2") format("woff2"),
+    url("fonts/RobotoRegular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: local("Roboto-Bold"),
+    url("fonts/RobotoBold.woff2") format("woff2"),
+    url("fonts/RobotoBold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "TTFirsNeue";
+  src: local("TTFirsNeue-Regular"),
+    url("fonts/TTFirsNeueRegular.woff2") format("woff2"),
+    url("fonts/TTFirsNeueRegular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "TTFirsNeue";
+  src: local("TTFirsNeue-Medium"),
+    url("fonts/TTFirsNeueMedium.woff2") format("woff2"),
+    url("fonts/TTFirsNeueMedium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "TTFirsNeue";
+  src: local("TTFirsNeue-Bold"),
+    url("fonts/TTFirsNeueBold.woff2") format("woff2"),
+    url("fonts/RobotoRegular.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  font-family: 'Roboto', 'TTFirsNeue', sans-serif;
+  word-break: break-word;
+}
+
+.list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.btn-reset {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 31px;
+  max-width: 1352px;
+}
+
+.logo-link {
+  outline: solid 2px transparent;
+  outline-offset: 5px;
+  transition: outline-color .3s ease-in-out;
+}
+
+.logo-link__img {
+  width: 190px;
+}
+
+.logo-link:focus {
+  outline-color: $brown-2-color;
+}
+
+.logo-link:hover {
+  outline-color: $orange-color;
+}
+
+.logo-link:active {
+  outline-color: transparent;
+}
+
+.section-title {
+  margin: 0;
+  font-family: $tt-first-neue-font;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.btn {
+  padding: 12px 19px;
+  border: 3px solid $orange-color;
+  font-family: $roboto-font;
+  font-size: 16px;
+  font-weight: 700;
+  color: $white-color;
+  background-color: $orange-color;
+  outline: none;
+  transition: color .3s ease-in-out, background-color .3s ease-in-out, border .3s ease-in-out;
+}
+
+.btn:focus {
+  border-color: $brown-2-color;
+}
+
+.btn:hover {
+  border-color: $brown-1-color;
+  background-color: $brown-1-color;
+}
+
+.btn:active {
+  border-color: $brown-2-color;
+  background-color: $brown-2-color;
+}
+
+.input {
+  padding: 14px 22px;
+  border: 1px solid transparent;
+  width: 100%;
+  font-size: 16px;
+  outline: none;
+  transition: border-color .3s ease-in-out;
+}
+
+.input::placeholder {
+  transition: color .3s ease-in-out;
+}
+
+.input:focus {
+  border-color: $orange-color;
+}
+
+.input:hover.input::placeholder {
+  color: $orange-color;
+}
+
+.close__btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  outline: none;
+
+  circle {
+    transition: fill .3s ease-in-out;
+  }
+}
+
+.close__btn:focus circle {
+  fill: $brown-1-color;
+}
+
+.close__btn:hover circle {
+  fill: $orange-color;
+}
+
+.close__btn:active circle {
+  fill: $brown-2-color;
+}
+
+.tel {
+  display: inline-block;
+  margin: 0;
+  padding-left: 21px;
+  font-family: $tt-first-neue-font;
+  font-size: 16px;
+  font-weight: 400;
+  color: $orange-color;
+  background-image: url("images/contacts-icon.svg");
+  background-repeat: no-repeat;
+  background-size: 20px 18px;
+  background-position: left;
+  outline: none;
+  transition: padding-left .3s ease-in-out;
+}
+
+.tel:focus {
+  padding-left: 30px;
+}
+
+.tel:hover {
+  padding-left: 30px;
+}

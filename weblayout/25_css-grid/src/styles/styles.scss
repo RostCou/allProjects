@@ -1,0 +1,661 @@
+@import "_variables.scss";
+@import "_common.scss";
+@import "_mixin.scss";
+
+// header
+
+.header {
+  background-color: $gray-4-color;
+
+  &__container {
+    display: grid;
+    min-height: 80px;
+    grid-template-columns: auto 1fr auto;
+    place-items: center start;
+  }
+
+  .nav {
+    justify-self: center;
+    transform: translateX(55px);
+
+    .burger {
+      display: none;
+    }
+
+    .close-btn {
+      display: none;
+    }
+
+    &__list {
+      display: grid;
+      grid-template-columns: repeat(5, auto);
+      gap: 79px;
+    }
+
+    &__link {
+      display: block;
+      width: 100%;
+      text-align: center;
+      font-family: $tt-first-neue-font;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 21px;
+      color: $white-color;
+      outline: none;
+      transition: color .3s ease-in-out, background-color .3s ease-in-out, width .3s ease-in-out;
+    }
+
+    &__link:focus {
+      width: calc(100% + 10px);
+      background-color: $brown-1-color;
+    }
+
+    &__link:hover {
+      width: 100%;
+      color: $orange-color;
+      background-color: transparent;
+    }
+
+    &__link:active {
+      width: 100%;
+      color: $brown-2-color;
+      background-color: transparent;
+    }
+
+    .tel {
+      display: none;
+    }
+  }
+
+  &__form {
+    display: grid;
+    width: 188px;
+    justify-self: end;
+    grid-template-columns: 1fr auto;
+  }
+
+  &__input {
+    display: none;
+    margin: 0;
+    padding: 0;
+    border: none;
+    border-bottom: 1px solid $gray-1-color;
+    width: 0;
+    font-family: $tt-first-neue-font;
+    font-size: 14px;
+    font-weight: 400;
+    color: $gray-1-color;
+    outline: none;
+    background: transparent;
+    transition: width .3s ease-in-out, border-color .3s ease-in-out;
+  }
+
+  &__input::placeholder {
+    color: $gray-1-color;
+  }
+
+  &__input:focus {
+    border-color: $brown-2-color;
+  }
+
+  &__input:focus.header__input::placeholder {
+    color: transparent;
+  }
+
+  &__input:hover {
+    border-color: $orange-color;
+  }
+
+  &__input:active {
+    border-color: $orange-color;
+  }
+
+  &__btn {
+    width: 25px;
+    outline: none;
+    place-self: center end;
+    transition: width .3s ease-in-out;
+
+    path {
+      transition: fill .3s ease-in-out;
+    }
+  }
+
+  &__btn:focus path {
+    fill: $brown-1-color;
+  }
+
+  &__btn:hover path {
+    fill: $orange-color;
+  }
+
+  &__btn:active path {
+    fill: $brown-2-color;
+  }
+}
+
+// main
+
+.main {
+  .hero {
+    padding: 41px 0 68px;
+    background-color: $white-color;
+
+    &__container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-areas:
+        "hero-img1 hero-img1 hero-title hero-title"
+        "hero-img1 hero-img1 hero-img2 hero-img2"
+        "hero-img1 hero-img1 hero-img3 hero-img4";
+      gap: 30px;
+    }
+
+    &__wrap {
+      position: relative;
+      padding: 50px 20px 60px 60px;
+      display: grid;
+      align-content: end;
+      justify-items: start;
+      background-image: url("images/hero-img1.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      grid-area: hero-img1;
+      @include marker("#мастеркласс", 7px 15px, 15px);
+    }
+
+    &__descr {
+      margin: 0;
+      font-family: $roboto-font;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 18.75px;
+      color: $white-color;
+    }
+
+    &__subtitle {
+      margin: 0;
+      margin-bottom: 20px;
+      font-family: $tt-first-neue-font;
+      font-size: 36px;
+      font-weight: 700;
+      line-height: 37.44px;
+      color: $white-color;
+    }
+
+    &__title {
+      margin-bottom: -15px;
+      color: $gray-4-color;
+      grid-area: hero-title;
+    }
+
+    &__img {
+      display: grid;
+      place-items: stretch;
+    }
+
+    &__img-2 {
+      grid-area: hero-img2;
+    }
+
+    &__img-3 {
+      grid-area: hero-img3;
+    }
+
+    &__img-4 {
+      grid-area: hero-img4;
+    }
+  }
+
+  .about-studio {
+    padding: 30px 0 73px;
+    background-color: $gray-4-color;
+
+    &__container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto 1fr auto;
+      grid-template-areas:
+        "about-title about-title"
+        "about-text about-img"
+        "about-text about-form";
+      gap: 30px;
+    }
+
+    &__title {
+      margin-bottom: -24px;
+      color: $white-color;
+      grid-area: about-title;
+    }
+
+    &__text {
+      margin: 0;
+      font-family: $roboto-font;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 28px;
+      color: $gray-2-color;
+      grid-area: about-text;
+    }
+
+    &__right {
+      background-image: url("images/about-studio-img.jpg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      grid-area: about-img;
+    }
+
+    &__form {
+      display: grid;
+      margin-top: -5px;
+      column-gap: 30px;
+      grid-area: about-form;
+      grid-template-columns: 1fr 126px;
+      grid-template-areas:
+        "about-form-label about-form-label"
+        "about-form-input about-form-btn";
+    }
+
+    &__label {
+      margin-bottom: 15px;
+      font-family: $tt-first-neue-font;
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 22px;
+      color: $white-color;
+      grid-area: about-form-label;
+    }
+
+    &__input {
+      background-color: $gray-5-color;
+      color: $white-color;
+      grid-area: about-form-input;
+    }
+
+    &__input::placeholder {
+      color: $gray-2-color;
+    }
+
+    &__input:focus.input::placeholder {
+      color: $gray-2-color;
+    }
+
+    &__btn {
+      grid-area: about-form-btn;
+    }
+  }
+
+  .projects {
+    padding: 70px 0 70px;
+    background-color: $white-color;
+
+    &__container {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      grid-template-areas:
+        "projects-title projects-title projects-title projects-title projects-title projects-title projects-title projects-title projects-title projects-title projects-title projects-title"
+        "artical-1 artical-1 artical-2 artical-2 artical-3 artical-3 content-1 content-1 content-1 content-1 content-1 content-1"
+        "content-2 content-2 content-2 content-2 content-2 content-2 artical-4 artical-4 artical-4 artical-5 artical-5 artical-5";
+      gap: 30px;
+    }
+
+    &__title {
+      margin-bottom: -17px;
+      grid-area: projects-title;
+    }
+
+    &__link {
+      display: flex;
+      height: 100%;
+      flex-direction: column;
+      justify-content: space-between;
+      outline: solid 2px transparent;
+      outline-offset: 5px;
+      transition: outline-color .3s ease-in-out;
+    }
+
+    &__link:focus {
+      outline-color: $brown-2-color;
+    }
+
+    &__link:hover {
+      outline-color: $orange-color;
+    }
+
+    &__link:active {
+      outline-color: transparent;
+    }
+
+    &__img img {
+      margin-bottom: 18px;
+      width: 100%;
+      height: 184px;
+      object-fit: cover;
+    }
+
+    &__article {
+      height: 300px;
+    }
+
+    &__article-1 {
+      position: relative;
+      grid-area: artical-1;
+      @include marker("#пейзаж", 6px 14px, 7px);
+    }
+
+    &__article-2 {
+      position: relative;
+      grid-area: artical-2;
+      @include marker("#портрет", 6px 14px, 7px);
+    }
+
+    &__article-3 {
+      position: relative;
+      grid-area: artical-3;
+      @include marker("#предмет", 6px 14px, 7px);
+    }
+
+    &__article-4 {
+      position: relative;
+      grid-area: artical-4;
+      @include marker("#ретушь", 6px 14px, 7px);
+    }
+
+    &__article-5 {
+      position: relative;
+      grid-area: artical-5;
+      @include marker("#портрет", 6px 14px, 7px);
+    }
+
+    &__caption {
+      display: -webkit-box;
+      margin: 0;
+      padding-right: 5px;
+      font-family: $roboto-font;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 22px;
+      color: $gray-4-color;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    &__time {
+      padding-left: 18px;
+      font-family: $roboto-font;
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 22px;
+      background-image: url("images/projects-icon.svg");
+      background-repeat: no-repeat;
+      background-position: center left;
+      color: $gray-3-color;
+    }
+
+    &__content {
+      display: grid;
+      padding: 23px 30px 30px;
+      grid-template-rows: auto auto 1fr auto;
+      justify-items: start;
+      background-repeat: no-repeat;
+      background-size: cover;
+
+      .projects__time {
+        color: $white-color;
+      }
+    }
+
+    &__subtitle {
+      margin: 0;
+      margin-bottom: 6px;
+      max-width: 40%;
+      font-family: $tt-first-neue-font;
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 24px;
+      color: $white-color;
+    }
+
+    &__descr {
+      margin: 0;
+      max-width: 51.5%;
+      font-family: $roboto-font;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 22px;
+      color: $white-color;
+    }
+
+    &__content-1 {
+      position: relative;
+      background-image: url("images/projects-img1.jpg");
+      grid-area: content-1;
+      @include marker("#fuji", 6px 14px, 7px);
+    }
+
+    &__content-2 {
+      position: relative;
+      background-image: url("images/projects-img2.jpg");
+      grid-area: content-2;
+      @include marker("#проектзабвение", 6px 14px, 7px);
+    }
+
+    &__btn {
+      padding: 12px 19px;
+      border: 3px solid $orange-color;
+      background: transparent;
+    }
+
+    &__btn:focus {
+      border-color: $orange-color;
+      background-color: $brown-1-color;
+    }
+
+    &__btn:hover {
+      border-color: $orange-color;
+      background-color: $orange-color;
+    }
+
+    &__btn:active {
+      border-color: $brown-2-color;
+      background-color: $brown-2-color;
+    }
+  }
+
+  .contacts {
+    padding-bottom: 68px;
+    background-color: $white-color;
+
+    &__container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-areas:
+        "contacts-title contacts-title contacts-title"
+        "contacts-right contacts-right contacts-form";
+      gap: 30px;
+    }
+
+    &__title {
+      margin-bottom: -5px;
+      grid-area: contacts-title;
+    }
+
+    &__content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      background-image: url("images/contacts-img.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      grid-area: contacts-right;
+      gap: 30px;
+    }
+
+    &__wrap {
+      position: relative;
+      padding: 174px 75px 140px 60px;
+      background-color: $gray-4-color;
+      opacity: .85;
+    }
+
+    &__subtitle {
+      margin: 0;
+      margin-bottom: 5px;
+      font-family: $tt-first-neue-font;
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 22px;
+      color: $white-color;
+    }
+
+    &__address {
+      margin: 0;
+      font-family: $roboto-font;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 28px;
+      font-style: normal;
+      color: $gray-2-color;
+    }
+
+    &__form {
+      margin-top: -7px;
+      display: grid;
+      justify-items: start;
+      grid-area: contacts-form;
+      grid-template-rows: auto auto auto auto 1fr auto;
+      gap: 21px;
+    }
+
+    &__caption {
+      margin: 0;
+      margin-bottom: -17px;
+      font-family: $tt-first-neue-font;
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 22px;
+      color: $gray-4-color;
+    }
+
+    &__text {
+      margin: 0;
+      margin-bottom: -5px;
+      max-width: 95%;
+      font-family: $roboto-font;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 22px;
+      color: $gray-3-color;
+    }
+
+    &__input {
+      background-color: $gray-1-color;
+      color: $gray-4-color;
+    }
+
+    &__input::placeholder {
+      color: $gray-3-color;
+    }
+
+    &__input:focus.input::placeholder {
+      color: $gray-3-color;
+    }
+
+    &__input-textarea {
+      min-height: 150px;
+      resize: none;
+    }
+  }
+}
+
+// footer
+
+.footer {
+  background-color: $gray-4-color;
+
+  &__container {
+    display: grid;
+    min-height: 106px;
+    align-items: center;
+    grid-template-columns: auto 1fr auto;
+  }
+
+  &__left {
+    .logo-link {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .logo-link__img {
+      margin-bottom: 5px;
+    }
+  }
+
+  &__descr {
+    margin: 0;
+    font-family: $tt-first-neue-font;
+    font-size: 14px;
+    font-weight: 400;
+    color: $gray-1-color;
+  }
+
+  &__text {
+    margin: 0;
+    margin-top: 5px;
+    max-width: 360px;
+    justify-self: center;
+    font-family: $roboto-font;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    color: $gray-2-color;
+    transform: translateX(-62px);
+  }
+
+  &__right {
+    justify-self: end;
+  }
+
+  &__parag {
+    margin: 0;
+    margin-bottom: 9px;
+    max-width: 200px;
+    font-family: $roboto-font;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    color: $gray-2-color;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  &__item:first-child {
+    justify-self: end;
+  }
+
+  &__link {
+    outline: none;
+
+    path {
+      transition: fill .3s ease-in-out;
+    }
+  }
+
+  &__link:focus path {
+    fill: $brown-1-color;
+  }
+
+  &__link:hover path {
+    fill: $orange-color;
+  }
+
+  &__link:active path {
+    fill: $brown-2-color;
+  }
+}

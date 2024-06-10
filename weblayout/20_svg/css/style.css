@@ -1,0 +1,139 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+@font-face {
+  font-family: "OpenSans";
+  src: local("OpenSans-Regular"),
+    url("../fonts/OpenSans-Regular.woff2") format("woff2"),
+    url("../fonts/OpenSans-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "OpenSans";
+  src: local("OpenSans-Bold"),
+    url("../fonts/OpenSans-Bold.woff2") format("woff2"),
+    url("../fonts/OpenSans-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  font-family: "OpenSans";
+}
+
+.list-reset {
+  margin: 0;
+  padding-inline-start: 0;
+  list-style: none;
+}
+
+.flex {
+  display: flex;
+}
+
+.main {
+  margin: 0 auto;
+  max-width: 1440px;
+}
+
+.section-one {
+  padding: 65px 58px 42px 57px;
+  text-align: center;
+  background-color: #FFF6ED;
+}
+
+.section__title {
+  margin: 0;
+  margin-bottom: 43px;
+  font-size: 40px;
+  font-weight: 700;
+  color: #000;
+}
+
+.section-one__list {
+  justify-content: space-between;
+}
+
+.list-item {
+  max-width: 375px;
+}
+
+.list-sprite {
+  margin-bottom: 22px;
+  width: 375px;
+  height: 288px;
+}
+
+.section__subtitle {
+  margin: 0;
+  margin-bottom: 8px;
+  text-align: start;
+  font-size: 30px;
+  font-weight: 700;
+  color: #000;
+}
+
+.section__subtitle-color {
+  color: #FF7A00;
+}
+
+.section__descr {
+  margin: 0;
+  text-align: start;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 28px;
+  color: #000;
+}
+
+.section-two {
+  padding: 24px 58px 24px 57px;
+}
+
+.section-two__left {
+  padding-top: 38px;
+  padding-right: 40px;
+  width: 663px;
+}
+
+.section__title-two {
+  margin-bottom: 12px;
+  line-height: 53px;
+}
+
+.section-two__right {
+  width: 662px;
+}
+
+.background-sprite {
+  position: absolute;
+}
+
+.icon-list {
+  position: absolute;
+  padding-left: 112px;
+  padding-top: 69px;
+  flex-direction: column;
+  align-items: center;
+  gap: 27px;
+}
+
+.icon-list__up {
+  gap: 90px;
+}
+
+.icon-list__down {
+  width: 410px;
+  gap: 90px;
+}

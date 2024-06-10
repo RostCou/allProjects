@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SVG-спрайты</title>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <main class="main">
+    <section class="section-one">
+      <h2 class="section__title">
+        Как это работает?
+      </h2>
+      <ul class="list-reset flex section-one__list">
+        <li class="list-item">
+          <svg class="list-sprite">
+            <use xlink:href="sprite.svg#sprite-coffee"></use>
+          </svg>
+          <h3 class="section__subtitle">
+            Утренний <span class="section__subtitle-color">кофе</span>
+          </h3>
+          <p class="section__descr">
+            Кофеин воздействует на центральную нервную систему как природный “будильник”. Поэтому мы быстрее
+            просыпаемся.
+          </p>
+        </li>
+        <li class="list-item">
+          <svg class="list-sprite">
+            <use xlink:href="sprite.svg#sprite-meditating"></use>
+          </svg>
+          <h3 class="section__subtitle">
+            Час <span class="section__subtitle-color">медитации</span>
+          </h3>
+          <p class="section__descr">
+            После практик оба полушария мозга начинают работать сбалансированно — это привносит порядок в вашу жизнь.
+          </p>
+        </li>
+        <li class="list-item">
+          <svg class="list-sprite">
+            <use xlink:href="sprite.svg#sprite-sprinting"></use>
+          </svg>
+          <h3 class="section__subtitle">
+            Вперёд к <span class="section__subtitle-color">свершениям!</span>
+          </h3>
+          <p class="section__descr">
+            Ресурсы каждого человека ограничены, поэтому нам необходимо беречь себя и вовремя останавливаться.
+          </p>
+        </li>
+      </ul>
+    </section>
+
+    <section class="section-two flex">
+      <div class="section-two__left">
+        <h2 class="section__title section__title-two">
+          Интеграция со сторонними сервисами
+        </h2>
+        <p class="section__descr">
+          Поможет всегда оставаться в курсе всех событий, быть максимально эффективным на протяжении всего рабочего дня,
+          контролировать свои задачи и не опоздать на запланированные встречи.
+        </p>
+      </div>
+
+      <div class="section-two__right">
+        <svg class="background-sprite" width="550" height="275">
+          <use xlink:href="sprite.svg#sprite-ellipse"></use>
+        </svg>
+        <div class="icon-list flex">
+          <ul class="list-reset icon-list__up flex">
+            <li>
+              <a href="#">
+                <svg width="70" height="70">
+                  <use xlink:href="sprite.svg#icon-facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <svg width="70" height="70">
+                  <use xlink:href="sprite.svg#icon-todoist"></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <svg width="70" height="70">
+                  <use xlink:href="sprite.svg#icon-worklio"></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <svg width="70" height="70">
+                  <use xlink:href="sprite.svg#icon-dropbox"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+          <ul class="list-reset icon-list__down flex">
+            <li>
+              <a href="#">
+                <svg width="70" height="70">
+                  <use xlink:href="sprite.svg#icon-google"></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <svg width="70" height="70">
+                  <use xlink:href="sprite.svg#icon-trello-plain"></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <svg width="70" height="70">
+                  <use xlink:href="sprite.svg#icon-slack"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+
+</html>

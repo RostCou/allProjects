@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <title>Список студентов</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/bootstrap-grid.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script defer src="main.js"></script>
+</head>
+
+<body>
+  <!-- Этап 1. Создайте верстку элементов, которые будут статичны (неизменны).  -->
+  <div class="container">
+    <form class="flex form">
+      <div class="form-left col-6 flex">
+        <label class="flex label-input">
+          Введите Имя
+          <input class="input" type="text" id="studentName">
+        </label>
+        <label class="flex label-input">
+          Введите Фамилию
+          <input class="input" type="text" id="studentSurname">
+        </label>
+        <label class="flex label-input">
+          Введите Отчество
+          <input class="input" type="text" id="studentMiddlename">
+        </label>
+      </div>
+      <div class="form-right col-6 flex">
+        <label class="flex label-input">
+          Введите дату рождения
+          <input class="input" type="date" id="studentBirth">
+        </label>
+        <label class="flex label-input">
+          Введите факультет
+          <input class="input" type="text" id="specialization">
+        </label>
+        <label class="flex label-input">
+          Введите год начала обучения
+          <input class="input" type="number" id="startTraining">
+        </label>
+      </div>
+      <div class="flex btn-wrapper">
+        <button class="btn" id="formBtn">
+          Добавить студента
+        </button>
+      </div>
+    </form>
+
+    <div class="flex search">
+      <input class="col-4 input" name="inputSearch" type="text" placeholder="Поиск по ФИО" style="max-width: 32%;">
+      <input class="col-2 input" name="inputSearch" type="text" placeholder="Поиск по Факультету">
+      <input class="col-3 input" name="inputSearch" type="number" placeholder="Поиск по году начала обучения">
+      <input class="col-3 input" name="inputSearch" type="number" placeholder="Поиск по году конца обучения">
+    </div>
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th class="table__title">
+            <button class="btn-reset table__btn">
+              Ф. И. О. студента
+            </button>
+          </th>
+          <th class="table__title">
+            <button class="btn-reset table__btn">
+              Факультет
+            </button>
+          </th>
+          <th class="table__title">
+            <button class="btn-reset table__btn">
+              Дата рождения (возраст)
+            </button>
+          </th>
+          <th class="table__title">
+            <button class="btn-reset table__btn">
+              Годы обучения (курс)
+            </button>
+          </th>
+        </tr>
+      </thead>
+    </table>
+  </div>
+</body>
+
+</html>
